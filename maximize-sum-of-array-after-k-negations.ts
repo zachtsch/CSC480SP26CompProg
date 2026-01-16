@@ -18,14 +18,18 @@
 import { MinPriorityQueue } from "datastructures-js";
 
 function largestSumAfterKNegations(nums: number[], k: number): number {
-    
     const pq = new MinPriorityQueue<number>();
-    pq.push(3);
-    console.log(pq.pop())
-
-     return -1;
+    for(const val of nums) pq.push(val)
+    for(let i = 0; i < k; i++){
+        // pq.push(pq.pop()!)
+        const temp = pq.pop()!
+        pq.push(-temp)
+    }
+    let sum = 0;
+    while(pq.size()>0) sum+=pq.pop()!
+    // return pq.toArray().reduce((a,b)=>a+b,0)
 };
-
+console.log(largestSumAfterKNegations([3,-1,0,2],3))
 // const ar : number[] = [1,2,10,3,7,4,10,15]
 // const str = ['hello','abc','a','banana']
 
