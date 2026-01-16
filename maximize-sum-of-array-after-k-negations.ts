@@ -1,3 +1,4 @@
+//sort approach O(k+nlogn)
 // [2,-3,-1,5,-4]
 
 
@@ -18,6 +19,7 @@
 import { MinPriorityQueue } from "datastructures-js";
 
 function largestSumAfterKNegations(nums: number[], k: number): number {
+    //pq approach O(klogn)
     const pq = new MinPriorityQueue<number>();
     for(const val of nums) pq.push(val)
     for(let i = 0; i < k; i++){
