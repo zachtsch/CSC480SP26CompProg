@@ -27,6 +27,7 @@ function largestSumAfterKNegations(nums: number[], k: number): number {
     }
     let sum = 0;
     while(pq.size()>0) sum+=pq.pop()!
+    return sum;
     // return pq.toArray().reduce((a,b)=>a+b,0)
 };
 console.log(largestSumAfterKNegations([3,-1,0,2],3))
