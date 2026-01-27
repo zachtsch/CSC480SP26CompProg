@@ -5,4 +5,4 @@ First clone the repo: git clone https://github.com/zachtsch/CSC480SP26CompProg.g
 
 Then navigate to the directory: cd CSC480SP26CompProg
 
-Then run npm i
+Then run: npm i
