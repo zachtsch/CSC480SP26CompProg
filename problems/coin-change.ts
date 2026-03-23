@@ -6,8 +6,7 @@ function coinChange(coins: number[], amount: number): number {
         if(x in memo) return memo[x]!
         if(x <  0) return Infinity;
         if(x == 0) return 0;
-        memo[x] = 1+coins.map(c=>recur(x-c)).reduce((a,b)=>b<a?b:a)
-        return memo[x]!
+        return memo[x] = 1+coins.map(c=>recur(x-c)).reduce((a,b)=>b<a?b:a)
     }
     const temp = recur(amount)
     return temp == Infinity ? -1 : temp;
